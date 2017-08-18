@@ -2,6 +2,9 @@
 import email
 import smtplib
 from email.mime.text import MIMEText
+from zentalk.zenDB import mail_host
+from zentalk.zenDB import mail_user
+from zentalk.zenDB import mail_pass
 
 #邮件发送
 
@@ -12,7 +15,9 @@ class SendMail(object):
         "felix_gu@asus.com",
         "jerry_qiu@asus.com",
     ]
-
+    mail_host = mail_host
+    mail_user = mail_user
+    mail_pass = mail_pass
 
     def sendTestMail(self, sub, content):
         me = self.mail_user + "@asus.com"
